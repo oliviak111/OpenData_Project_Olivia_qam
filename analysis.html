@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Project</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+   </head>
+
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1>NYC Build Permit Project</h1>
+          <h2></h2>
+      </div>
+    </div> 
+    
+    <nav class="container" id="bar">
+      <a href="index.html">Homepage</a>
+      <a href="info.html">Information</a>
+      <a href="analysis.html">Analysis</a>
+    </nav>
+
+    <div class="container subbanner">
+      <div>
+        <p>This prject provides filtering, analysis of build permits retrieved from NYC Open Data.</p>
+        <a class="button" href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a> 
+        <a class="button" target="_blank" href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data"
+"> DOB NOW: Build - Approved Permits</a>
+        <a class="button" target="_blank" href="https://jsoneditoronline.org/"> JSON Editor Online</a>
+       </div>
+    </div>
+
+    <div class="container">
+      <div id="leftPanel">
+        <div class="card">
+          <h3>SEARCH By Street</h3>
+          <input type="text" id="streets" placeholder="Enter Street (all CAPS)">
+          <hr></hr>
+          <a class="button" onclick="filterBystreet()"> Search </a>
+        </div>
+        <!--Challenge 1: Create another UI in order to filter by zip code. [See Challenge 2 in script.js] -->
+        <div class="card">
+          <h3>SEARCH By Vehicle</h3>
+          <input type="text" id="vehicle" placeholder="Enter Vehicle">
+          <hr></hr>
+          <a class="button" onclick="filterByvehicle()"> Search </a>
+        </div>
+
+        <!--Challenge 3: Create another UI in order to filter by complaint type. [See Challenge 4 in script.js] -->
+        <div class="card">
+          <h3>SEARCH By ID</h3>
+          <input type="text" id="id" placeholder="Enter Collision ID">
+          <hr></hr>
+          <a class="button" onclick="filterByid()"> Search </a>
+        </div>
+
+      </div>
+
+      <div class="card" id="rightPanel">
+        <h1>Build Permit</h1>
+        <div id="result" class="container"></div>
+        <div id="output" class="container"></div>
+      </div>
+      
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>Build Permit Project</h3>
+    </div>  
+  </body>
+</html>
