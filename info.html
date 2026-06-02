@@ -6,12 +6,14 @@
     <title>Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
+    <script src="helper.js"></script>
+    <script src="drop.js"></script>
    </head>
 
   <body onload="init()">
     <div id="banner" class="container center">
       <div style="text-align:center">
-          <h1>NYC Build Permit Project</h1>
+          <h1>Information(Filter) Page</h1>
           <h2></h2>
       </div>
     </div> 
@@ -23,8 +25,8 @@
     </nav>
 
     <div class="container subbanner">
-      <div>
-        <p>This project provides filtering, analysis of build permits retrieved from NYC Open Data.</p>
+      <div class = "card">
+        <p>This page provides filtering of the data to search and find wanted information from the data.</p>
         <a class="button" href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a> 
         <a class="button" target="_blank" href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data"
 "> DOB NOW: Build - Approved Permits</a>
@@ -35,31 +37,26 @@
     <div class="container">
       <div id="leftPanel">
         <div class="card">
-          <h3>Search By Tracking number</h3>
-          <input type="text" id="track" placeholder="Enter tracking #">
+          <h3>Search By Zipcode</h3>
+          <input type="text" id="zip_code" placeholder="Enter zipcode:">
           <hr></hr>
-          <a class="button" onclick="filterBytracknum()"> Search </a>
+          <a class="button2" onclick="filterByzip()"> Search </a>
         </div>
-        <!--Challenge 1: Create another UI in order to filter by zip code. [See Challenge 2 in script.js] -->
+        
         <div class="card">
-          <h3>SEARCH By borough</h3>
-          <input type="text" id="borough" placeholder="Enter borough">
+          <h3 id="h">SEARCH By Tracking Number and Borough</h3>
+          <input type="text" id="tracking_number" placeholder="Enter Tracking number">
+          <select id="borough"></select>
           <hr></hr>
-          <a class="button" onclick="filterByborough()"> Search </a>
+          <a class="button2" onclick="filterBytrackandboro()"> Search </a>
         </div>
 
-        <!--Challenge 3: Create another UI in order to filter by complaint type. [See Challenge 4 in script.js] -->
-        <div class="card">
-          <h3>SEARCH By ID</h3>
-          <input type="text" id="id" placeholder="Enter Collision ID">
-          <hr></hr>
-          <a class="button" onclick="filterByid()"> Search </a>
-        </div>
+        
 
       </div>
 
       <div class="card" id="rightPanel">
-        <h1>Build Permit</h1>
+        <h1 >Build Permit</h1>
         <div id="result" class="container"></div>
         <div id="output" class="container"></div>
       </div>
