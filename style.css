@@ -80,10 +80,20 @@ nav a:hover{
 #rightPanel{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    background-color: rgb(252, 255, 226);
+    background-color: rgba(129, 16, 16, 0.801);
+    color:white;
 
 }
 
+.button{
+    flex:1;
+    margin:5px;
+    padding:5px;
+    border:1px solid gray;
+    text-align:center;
+    font-weight: bold;
+    background-color: rgba(223, 213, 128, 0.788);
+}
 .button2{
     flex:1;
     margin:5px;

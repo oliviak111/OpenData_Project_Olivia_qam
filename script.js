@@ -6,8 +6,8 @@ async function init(){
   data = await info.json();
   //console.log(data);
 
-  output = document.getElementById("output");
-  result = document.getElementById("result");
+  output = get("output");
+  result = get("result");
   let build = "";
   let ct = 0;
 
@@ -37,7 +37,7 @@ async function init(){
   //document.getElementById("zip_code").innerHTML = zip_code;
 
   let borough = fillDropDown("borough");
-  document.getElementById("borough").innerHTML = borough;
+  get("borough").innerHTML = borough;
 
   //let agencies = fillDropDown("agency_name");
   //document.getElementById("agencies").innerHTML = agencies;  
@@ -65,7 +65,7 @@ function filterByzip(){
                  <p>Latitude: ${dob.latitude}</p>
                  <p>Longitude: ${dob.longitude}</p>
                 </div>`;
-      ct += 1;
+      ct ++;
     }
   }
   result.innerHTML = `${ct} Results found`;
@@ -95,9 +95,10 @@ function filterBytrackandboro(){
                  <p>Latitude: ${dob.latitude}</p>
                  <p>Longitude: ${dob.longitude}</p>
                 </div>`;
-      ct += 1;
+      ct ++;
     }
   }
   result.innerHTML = `${ct} Results found`;
   output.innerHTML = build;  
 }
+

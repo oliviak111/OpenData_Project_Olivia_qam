@@ -1,67 +1,61 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Project</title>
-  
+
+    <!-- Import libraries and link files  -->
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link href="c3.css" rel="stylesheet" type="text/css" />
     <script src="c3.js"></script>
-    <script src="d3.js"></script>
-    <script src="helper.js"></script>  
-    <script src="script.js"></script>
+    <script src="d3.js"></script>    
+    <script src="helper.js"></script>
+    <script src="sscript22.js"></script>
+
    </head>
-  
-  <body onload="init()">
+   
+  <body onload="init_b()">
     <div id="banner" class="container center">
-      <h1> Charts: DOB Now: Approved Build Permits </h1>
+      <div style="text-align:center">
+          <h1> Charts: DOB Now: Approved Build Permits</h1>
+      </div>
     </div>
+
+    
+
     <div class="container subbanner">
       <div>
-        <p></p>
+        <p>This page shows the charts and graph made from the information given by the DOB page.</h4>
        </div>
     </div>
-    
+
     <nav class="container" id="bar">
       <a href="index.html">Homepage</a>
       <a href="info.html">Information</a>
       <a href="analysis.html">Analysis</a>
     </nav>
-
+<br>
+<br>
 
     <div class="container">
-      <div id="panel">
-        
-        <div class="card">
-          <h3>Select Chart Type</h3>
-          <select id="chartType" style="width:100px;">
-            <option value="bar">Bar</option>
-            <option value="pie">Pie</option>
-          </select>
-        </div>
-        
-        <div class="card">
-          <h3>Permits by Borough</h3>
-          <p><span class="highlight">Scenario:</span>The numer of approved permits by borough</p>
-          <a class="button" onclick="permitsByBorough()"> Show Chart </a>
-        </div>
-        
-        <div class="card">
-          <h3>Permits by NTA</h3>
-          <p><span class="highlight">Scenario:</span>The number of approved permits by nta</p>
-          <a class="button" onclick="permitsByNta()"> Show Chart </a>
-        </div>
-      </div>
-      
-      <div class="card">
-       <div id="chart"></div> <!-- div for chart -->
-      </div>
+      <p><span class="highlight">Scenario:</span>The numer of approved permits by borough</p>
+      <select id="chartType" style="width:200px;">
+        <option>Select Chart Type</option>
+        <option value="line">Line</option>
+        <option value="bar">Bar</option>
+        <option value="pie">Pie</option>
+        <option value="donut">Donut</option>
+      </select>
+      <a class="button" onclick="permitsByBorough()"> Show Chart </a>
     </div>
 
+    <div class="container subbanner"><br></div>
+
+    <div id="output"></div> <!-- div for chart -->
+
     <div id="footer" class="container center">
-      <h3>project</h3>
+      <h3>Project</h3>
     </div>  
   </body>
 </html>

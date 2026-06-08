@@ -11,3 +11,4 @@ function displayChart( data, chart_id, chart_type ){
     }
   });
 }
+
