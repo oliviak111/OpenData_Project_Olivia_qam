@@ -41,7 +41,7 @@ function permitsByBorough(){
   let chartType = document.getElementById("chartType").value;
   
   //Discussion 5: Display chart using displayChart() function.
-  displayChart(chartData, "output", chartType);
+  displayChart(chartData, "output2", chartType);
 }
 
 

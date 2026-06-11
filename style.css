@@ -17,8 +17,20 @@
 }
 
 nav{
-  padding:5px
+  background-color: rgb(197, 197, 231);
+  padding:10px
 }
+
+#bar{
+  background-color: rgb(92, 110, 11);
+  padding:10px
+}
+
+#bar2{
+  background-color: rgb(121, 178, 231);
+  padding:10px
+}
+
 nav a{
   color:black;
   margin:0 10px 0 10px;
@@ -28,14 +40,35 @@ nav a{
 }
 
 #banner{
-  height: 250px;
-  background-image: url("Buildings.png");
+  height: 300px;
+  background-image: url("wd.jpg");
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 45px;
   align-items: center;
   justify-content:center;
-  color: rgb(5, 1, 1);
+  color: rgb(255, 255, 255);
 }
+
+#banner2{
+  height: 300px;
+  background-image: url("asd.webp");
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 45px;
+  align-items: center;
+  justify-content:center;
+  color: rgb(255, 255, 255);
+}
+
+#banner3{
+  height: 300px;
+  background-image: url("www.webp");
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 45px;
+  align-items: center;
+  justify-content:center;
+  color: rgb(255, 255, 255);
+}
+
 
 html{
   font-family: Arial;
@@ -73,14 +106,14 @@ nav a:hover{
 }
 
 #output{
-  display:flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+  background-color: rgba(129, 16, 16, 0.801);
 }
 
 #rightPanel{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    background-color: rgba(129, 16, 16, 0.801);
+    background-color: rgba(213, 194, 165, 1.0);
     color:white;
 
 }
@@ -102,4 +135,21 @@ nav a:hover{
     text-align:center;
     font-weight: bold;
     background-color: rgba(223, 213, 128, 0.788);
+}
+
+.button3{
+    flex:1;
+    margin:5px;
+    padding:5px;
+    border:1px solid rgb(48, 65, 218);
+    text-align:center;
+    font-weight: bold;
+    background-color: rgba(193, 233, 247, 0.788);
+    color: rgb(33, 105, 146);
+}
+
+#output2{
+  flex:6;
+
+  background-color: rgb(255, 251, 195);
 }
